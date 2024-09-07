@@ -1,0 +1,66 @@
+####workflow
+
+There is a assets_list with all references (APA style) of the materials collected (/materials/assets_list)
+There are 4 kinds of materials:
+	papers
+	webpages
+	books
+	other(pdf/doc)
+the classify_materials function create sublists, one for each kind of material, and save it in the corrisponding folder
+so we have
+	books_references in /books
+	other_resources_references in /other_resources
+	article_references in /papers
+	website_references in /webpages
+
+we need to create algos to extract and clean the relevant information to then dump in a datbase.
+
+#### structure of the data (papers)
+
+	data = {
+                        "_id": str(ObjectId()),
+                        "journal_name",
+                        "issue",
+                        "title",
+                        "authors",
+                        "abstract",
+                        "body",
+                        "bibliography",
+                        "keywords",
+                        "publication_date",
+                        "DOI",
+                        "language",
+                        "raw_text",
+                        "targets": ["People", "Trainers", "Public Administration"]  # Example targets
+                    }
+	
+
+#### structure
+
+folders for different materials
+	papers
+	webpages
+	books
+	other(pdf/doc)
+
+#### Log
+
+created structure with folders for different materials
+	papers: done for 1 journal, the problem is that I will have to do for all different journals
+	webpages
+	books
+	other(pdf/doc)
+
+Implemented the classify_materials function
+	refined classifier, now create 4 lists, one for papers, one for books, one for website and one for other resources
+implemented the paper_PDF_extractor
+	implemnted the matching function:
+		I believe the easiest way to extract relevant info is to match the reference with the paper and start from there. 
+		There may be more efficient/better approaches (AI? like SpaCy?) but for the moment it works like that
+	implemented the title and author extraction
+	implemented part of the abstract extraction
+
+Extract Journal from PDF (or a list of journals) -> this will be used to havedifferent function based on the journal structure
+
+
+	

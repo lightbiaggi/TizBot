@@ -1,0 +1,25 @@
+TODO
+classify_materials: improve precision, working quite well in general
+
+paper_PDF_extractor: 
+
+	extract_abstract: more precision needed
+	extract_body: implement properly
+	extract_bibliography: implement properly
+	extract_publication_date: implement properly
+	extract_doi: implement properly
+	extract_keywords: implement properly (maybe at a later time with AI)
+	
+website_extractor:
+	
+	Implement all
+	NB - some websites we have are links, some are links to PDF, we need to handle that
+	
+book_extractor
+	
+	Implement all
+	
+Main
+	implement a main that cyce trought all the materials/modules and extract all relevant info.
+	TODO after all modules are ready
+
